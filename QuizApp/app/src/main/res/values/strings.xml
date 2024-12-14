@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">QuizApp</string>
+    <string name="question_screen">Question</string>
+    <string name="categories_screen">Categories</string>
+    <string name="about_screen">About</string>
+    <string name="back_button">Back</string>
 </resources>

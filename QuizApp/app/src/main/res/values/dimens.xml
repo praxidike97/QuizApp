@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="thickness_divider">1dp</dimen>
+
+    <dimen name="fontsize_big">20.sp</dimen>
+    <dimen name="fontsize_huge">40.sp</dimen>
+</resources>
