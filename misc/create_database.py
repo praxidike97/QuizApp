@@ -4,7 +4,8 @@ import os
 
 from tqdm import tqdm
 
-categories = ["Animals", "Celebrities", "Entertainment", "General", "Geography", "History", "Hobbies", "Humanities", "Literature", "Movies"]
+categories = ["Animals", "Celebrities", "Entertainment", "General", "Geography", "History", "Hobbies", "Humanities", "Literature", "Movies", "Music", "People", "Religion", "Science", "Sports",
+ "Television", "Video-Games"]
 
 
 os.system("rm questions.sqlite")

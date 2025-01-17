@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -46,28 +45,28 @@ fun StartScreen(
         modifier = modifier,
         verticalArrangement = Arrangement.Center
     ) {
-        NextScreenButton(label = "Infinite mode",
+        CustomQuizButton(label = "Random",
             onClick = { onInfiniteModeButtonClicked() },
             modifier = Modifier
                 .align(alignment = Alignment.CenterHorizontally))
 
         Spacer(modifier = Modifier.height(40.dp))
 
-        NextScreenButton(label = "Categories",
+        CustomQuizButton(label = "Categories",
             onClick = { onCategoriesButtonClicked() },
             modifier = Modifier
                 .align(alignment = Alignment.CenterHorizontally))
 
         Spacer(modifier = Modifier.height(40.dp))
 
-        NextScreenButton(label = "Statistics",
+        CustomQuizButton(label = "Statistics",
             onClick = { onStatisticsButtonClicked() },
             modifier = Modifier
                 .align(alignment = Alignment.CenterHorizontally))
 
         Spacer(modifier = Modifier.height(40.dp))
         
-        NextScreenButton(label = "About",
+        CustomQuizButton(label = "About",
             onClick = { onAboutButtonClicked() },
             modifier = Modifier
                 .align(alignment = Alignment.CenterHorizontally))

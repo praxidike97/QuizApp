@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.sp
 import de.quiz.quizapp.R
 
 @Composable
-fun NextScreenButton(
+fun CustomQuizButton(
     label: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier

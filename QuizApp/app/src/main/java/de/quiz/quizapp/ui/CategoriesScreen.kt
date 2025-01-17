@@ -5,6 +5,7 @@ import android.content.res.Configuration
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -20,15 +21,20 @@ fun CategoriesScreen(
     onCategoryButtonClicked: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
-
-    Column(
-        modifier = modifier,
-    ) {
-        Spacer(modifier = Modifier.height(60.dp))
-        DBHelper.getCategories(context).forEach { category ->
-            NextScreenButton(label = category.name, onClick = {onCategoryButtonClicked(category.id)}, modifier = Modifier
-                    .align(alignment = Alignment.CenterHorizontally))
-            Spacer(modifier = Modifier.height(40.dp))
+    Surface {
+        Column(
+            modifier = modifier,
+        ) {
+            Spacer(modifier = Modifier.height(60.dp))
+            DBHelper.getCategories(context).forEach { category ->
+                CustomQuizButton(
+                    label = category.name,
+                    onClick = { onCategoryButtonClicked(category.id) },
+                    modifier = Modifier
+                        .align(alignment = Alignment.CenterHorizontally)
+                )
+                Spacer(modifier = Modifier.height(40.dp))
+            }
         }
     }
 }
