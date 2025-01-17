@@ -32,12 +32,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import de.quiz.quizapp.ui.StartScreen
 import de.quiz.quizapp.ui.QuestionScreen
+import de.quiz.quizapp.ui.StatisticsScreen
 import de.quiz.quizapp.ui.theme.QuizAppTheme
 
 enum class QuizAppScreen(@StringRes val title: Int) {
     Start(title = R.string.app_name),
     Question(title = R.string.question_screen),
     Categories(title = R.string.categories_screen),
+    Statistics(title = R.string.statistics_screen),
     About(title = R.string.about_screen)
 }
 
@@ -102,6 +104,9 @@ fun QuizApp(
                     onCategoriesButtonClicked = {
                         navController.navigate(QuizAppScreen.Categories.name)
                     },
+                    onStatisticsButtonClicked = {
+                        navController.navigate(QuizAppScreen.Statistics.name)
+                    },
                     onAboutButtonClicked = {
                         navController.navigate(QuizAppScreen.About.name)
                     },
@@ -129,6 +134,10 @@ fun QuizApp(
 
             composable(route = QuizAppScreen.About.name) {
                 AboutScreen()
+            }
+
+            composable(route = QuizAppScreen.Statistics.name) {
+                StatisticsScreen(context)
             }
 
             /*

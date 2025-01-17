@@ -23,6 +23,7 @@ import de.quiz.quizapp.ui.theme.QuizAppTheme
 fun StartScreen(
     onInfiniteModeButtonClicked: () -> Unit,
     onCategoriesButtonClicked: () -> Unit,
+    onStatisticsButtonClicked: () -> Unit,
     onAboutButtonClicked: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -58,6 +59,13 @@ fun StartScreen(
                 .align(alignment = Alignment.CenterHorizontally))
 
         Spacer(modifier = Modifier.height(40.dp))
+
+        NextScreenButton(label = "Statistics",
+            onClick = { onStatisticsButtonClicked() },
+            modifier = Modifier
+                .align(alignment = Alignment.CenterHorizontally))
+
+        Spacer(modifier = Modifier.height(40.dp))
         
         NextScreenButton(label = "About",
             onClick = { onAboutButtonClicked() },
@@ -78,10 +86,10 @@ fun StartScreenPreview() {
         StartScreen(
             onInfiniteModeButtonClicked = {},
             onCategoriesButtonClicked = {},
+            onStatisticsButtonClicked = {},
             onAboutButtonClicked = {},
             modifier = Modifier
                 .fillMaxSize()
-                .padding(dimensionResource(R.dimen.padding_medium))
         )
     }
 }
