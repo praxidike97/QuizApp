@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QuizApp</string>
+    <string name="app_name">JustQuiz</string>
     <string name="question_screen">Question</string>
     <string name="categories_screen">Categories</string>
     <string name="about_screen">About</string>
